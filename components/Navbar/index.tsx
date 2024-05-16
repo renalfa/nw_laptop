@@ -1,6 +1,6 @@
 import React from "react";
 
-const index = () => {
+const Navbar = () => {
   return (
     <div className="bg-gradient-to-tr from-[#F5F5F5] to-[#d9d9d9] w-full flex items-center">
       <svg
@@ -19,4 +19,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Navbar;

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Placeholder from "@/public/assets/placeholder.png";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 
-const index = ({ data }: { data: ProductProps }) => {
+const CardProduct = ({ data }: { data: ProductProps }) => {
   return (
     <div className="relative w-full border border-[#f2f2f2] rounded-lg p-2 flex flex-col gap-2">
       {!data.isReady && (
@@ -64,4 +64,4 @@ const index = ({ data }: { data: ProductProps }) => {
   );
 };
 
-export default index;
+export default CardProduct;

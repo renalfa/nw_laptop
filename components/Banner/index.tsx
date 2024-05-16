@@ -7,9 +7,9 @@ import { FreeMode, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import Banner from "@/public/assets/placeholder-banner.png";
+import Img from "@/public/assets/placeholder-banner.png";
 
-const index = ({ length }: { length?: number }) => {
+const Banner = ({ length }: { length?: number }) => {
   return (
     <div className="flex items-center h-full">
       <Swiper
@@ -33,11 +33,11 @@ const index = ({ length }: { length?: number }) => {
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 24,
+            spaceBetween: 14,
           },
           1440: {
             slidesPerView: 3,
-            spaceBetween: 24,
+            spaceBetween: 14,
           },
         }}
       >
@@ -45,7 +45,7 @@ const index = ({ length }: { length?: number }) => {
           <SwiperSlide className="flex items-center justify-center" key={index}>
             <div className="relative">
               <Image
-                src={Banner}
+                src={Img}
                 alt="banner"
                 width={500}
                 height={500}
@@ -60,4 +60,4 @@ const index = ({ length }: { length?: number }) => {
   );
 };
 
-export default index;
+export default Banner;
