@@ -7,9 +7,7 @@ import { FreeMode, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import Img from "@/public/assets/placeholder-banner.png";
-
-const Banner = ({ length }: { length?: number }) => {
+const Banner = ({ data }: { data: any[] }) => {
   return (
     <div className="flex items-center h-full">
       <Swiper
@@ -41,15 +39,15 @@ const Banner = ({ length }: { length?: number }) => {
           },
         }}
       >
-        {Array.from({ length: length ? length : 9 }).map((_, index) => (
+        {data.map((item, index) => (
           <SwiperSlide className="flex items-center justify-center" key={index}>
             <div className="relative">
               <Image
-                src={Img}
-                alt="banner"
+                src={item.url}
+                alt={item.alt}
                 width={500}
                 height={500}
-                className="rounded-lg aspect-[1/1] object-cover w-full h-full"
+                className="rounded-lg aspect-[1/1] object-cover object-center w-full h-full"
               />
               <div className="absolute bg-gradient-to-b from-transparent to-black/80 w-full h-[100px] bottom-0 rounded-b-lg"></div>
             </div>

@@ -1,8 +1,9 @@
 import React from "react";
-import { ProductProps } from "./index.type";
 import Image from "next/image";
-import Placeholder from "@/public/assets/placeholder.png";
+
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+
+import { ProductProps } from "./index.type";
 
 const CardProduct = ({ data }: { data: ProductProps }) => {
   return (
@@ -25,13 +26,13 @@ const CardProduct = ({ data }: { data: ProductProps }) => {
       >
         {data.isReady ? "Ready" : "Sold"}
       </div>
-      <div className="flex items-center gap-3 border-b border-b-[#f2f2f2]">
+      <div className="flex items-center gap-3 border-b border-b-[#f2f2f2] pb-2">
         <Image
-          src={Placeholder}
+          src={data.cover}
           width={200}
           height={200}
           alt={data.name}
-          className="object-contain w-24 h-24"
+          className="object-cover object-center w-24 h-24 rounded-md"
         />
         <div className="flex flex-col justify-center gap-1">
           <h2 className="font-semibold text-black">{data.name}</h2>
