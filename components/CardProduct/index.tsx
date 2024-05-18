@@ -4,9 +4,27 @@ import Image from "next/image";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 import { ProductProps } from "./index.type";
+import Link from "next/link";
 
 const CardProduct = ({ data }: { data: ProductProps }) => {
-  return (
+  const handleBuyClick = () => {
+    const message = `*Halo admin, saya ingin menanyakan stok dan membeli produk berikut* :
+    
+Nama Produk: ${data.name}
+Layar: ${data.screen}
+Prosesor: ${data.processor}
+Penyimpanan: ${data.ram} / ${data.storage}
+Harga: ${data.price}
+    
+*Apakah produk ini masih tersedia? Terima kasih*.`;
+
+    const whatsappUrl = `https://wa.me/6289523968539?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
+  const CardContent = () => (
     <div className="relative w-full border border-[#f2f2f2] rounded-lg p-2 flex flex-col gap-2">
       {!data.isReady && (
         <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full rounded-lg bg-gray-500/50">
@@ -56,13 +74,21 @@ const CardProduct = ({ data }: { data: ProductProps }) => {
       </div>
       <div className="flex items-center justify-between">
         <p className="font-bold text-rose-500">{data.price}</p>
-        <button className="flex items-center justify-center gap-2 px-4 py-1 font-bold text-black bg-yellow-500 rounded">
+        <button
+          onClick={handleBuyClick}
+          className="flex items-center justify-center gap-2 px-4 py-1 font-bold text-black bg-yellow-500 rounded"
+          disabled={!data.isReady}
+        >
           <HiOutlineShoppingBag size={20} />
           Beli
         </button>
       </div>
     </div>
   );
+
+  if (data.isReady) {
+    return <Link href={`/${data.id}`}>{CardContent()}</Link>;
+  } else return CardContent();
 };
 
 export default CardProduct;

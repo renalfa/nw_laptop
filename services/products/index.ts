@@ -3,6 +3,7 @@ import {
   collection,
   deleteDoc,
   doc,
+  getDoc,
   getDocs,
   updateDoc,
 } from "firebase/firestore";
@@ -25,6 +26,24 @@ export const getAllProducts = async () => {
     return products;
   } catch (error: any) {
     throw new Error("Error fetching documents: ", error.message);
+  }
+};
+
+export const getProductById = async (productId: string) => {
+  try {
+    const productRef = doc(firestore, "products", productId);
+    const productDoc = await getDoc(productRef);
+
+    if (productDoc.exists()) {
+      return {
+        id: productDoc.id,
+        ...productDoc.data(),
+      };
+    } else {
+      throw new Error("No such document!");
+    }
+  } catch (error: any) {
+    throw new Error("Error fetching document: ", error.message);
   }
 };
 

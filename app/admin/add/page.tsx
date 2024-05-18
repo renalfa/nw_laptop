@@ -477,7 +477,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-end justify-end gap-4">
-          <Link href={"/admin"} className="text-white btn">
+          <Link href={"/admin"} className="text-white btn btn-neutral">
             Batal
           </Link>
           <button type="submit" className="btn btn-accent">

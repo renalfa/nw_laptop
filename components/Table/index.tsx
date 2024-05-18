@@ -4,6 +4,7 @@ import Image from "next/image";
 import { GoTrash, GoPencil } from "react-icons/go";
 import { TableProps } from "./index.type";
 import Switch from "@/components/Switch";
+import Link from "next/link";
 
 const Table = ({ data, onSetId, onSwitch }: TableProps) => {
   return (
@@ -55,9 +56,9 @@ const Table = ({ data, onSetId, onSwitch }: TableProps) => {
                 : item.description}
             </td>
             <td className="space-x-2">
-              <button className="text-white btn btn-circle btn-md">
+              <Link href={`/admin/edit/${item.id}`} className="text-white btn btn-neutral btn-circle btn-md">
                 <GoPencil size={24} />
-              </button>
+              </Link>
               <button
                 onClick={() => onSetId(item.id)}
                 className="text-white btn btn-circle btn-md btn-error"
