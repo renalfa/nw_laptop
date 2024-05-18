@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "NW Laptop Madiun",
-  description: "Jual Beli dan tukar tambah laptop",
+  description: "Jual, beli dan tukar tambah laptop. Terpercaya dan termurah!!!",
 };
 
 export default async function RootLayout({
