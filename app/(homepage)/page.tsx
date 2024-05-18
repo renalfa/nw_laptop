@@ -4,7 +4,7 @@ import { getAllBanners } from "@/services/banners";
 
 import { getAllProducts } from "@/services/products";
 
-export const revalidate = 10; // revalidate at most every hour
+export const revalidate = 0; // revalidate at most every hour
 
 export default async function Home() {
   const data = await getAllProducts();
