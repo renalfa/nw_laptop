@@ -8,8 +8,9 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { firestore } from "@/services/firebase";
+import { cache } from "react";
 
-export const getAllProducts = async () => {
+export const getAllProducts = cache(async () => {
   try {
     const colRef = collection(firestore, "products");
     const productsSnapshot = await getDocs(colRef);
@@ -27,7 +28,7 @@ export const getAllProducts = async () => {
   } catch (error: any) {
     throw new Error("Error fetching documents: ", error.message);
   }
-};
+});
 
 export const getProductById = async (productId: string) => {
   try {
