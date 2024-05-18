@@ -23,7 +23,7 @@ const Modal = ({
           Apakah kamu yakin untuk menghapus produk ini?
         </p>
         <div className="flex items-center justify-end gap-2 mt-4">
-          <button onClick={onClose} className="text-white btn">
+          <button onClick={onClose} className="text-white btn btn-neutral">
             Batal
           </button>
           <button onClick={onSubmit} className="text-white btn btn-error">
