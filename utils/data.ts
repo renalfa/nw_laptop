@@ -32,7 +32,7 @@ export const optionBrand = [
   "all",
 ];
 export const optionRam = ["4 GB", "8 GB", "16 GB", "32 GB", "64 GB"];
-export const optionStorage = ["64 GB", "128 GB", "256 GB", "512 GB", "1 TB"];
+export const optionStorage = ["64 GB", "128 GB", "256 GB", "320 GB", "500 GB", "512 GB", "700 GB", "1 TB"];
 export const optionTypeStorage = ["SSD", "HDD"];
 export const optionScreen = [
   "10 inch",

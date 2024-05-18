@@ -17,7 +17,7 @@ const Footer = () => {
         />
         <p className="font-bold">
           NW Laptop Madiun <br />
-          Jual Beli dan tukar tambah laptop
+          Beli laptop berkualitasmu disini.
         </p>
         <p>Copyright © 2024 - All right reserved</p>
       </aside>
