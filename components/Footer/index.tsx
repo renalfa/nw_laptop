@@ -20,6 +20,7 @@ const Footer = () => {
           Beli laptop berkualitasmu disini.
         </p>
         <p>Copyright © 2024 - All right reserved</p>
+        <p>Kota Madiun, Jawa Timur, Indonesia </p>
       </aside>
       <nav className="relative z-10">
         <div className="grid grid-flow-col gap-4">

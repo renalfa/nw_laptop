@@ -2,6 +2,11 @@ import { ProductProps } from "../CardProduct/index.type";
 
 export interface TableProps {
   data: ProductProps[];
-  onSetId: (productId: string) => void;
-  onSwitch: (productId: string, payload: any) => void;
+  onSetId: (id: string) => void;
+  onSwitch: (id: string, status: boolean) => void;
+  currentPage: number;
+  totalItems: number;
+  itemsPerPage: number;
+  onPageChange: (page: number) => void;
 }
+
