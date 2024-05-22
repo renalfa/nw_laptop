@@ -12,6 +12,6 @@ export interface ProductProps {
   screen: string;
   images: string[];
   typeStorage: string;
-  resolution: string;
+  color: string;
   OS: string;
 }

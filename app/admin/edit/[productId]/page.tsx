@@ -7,9 +7,9 @@ import {
 } from "@/services/products";
 import {
   optionBrand,
+  optionColor,
   optionOS,
   optionRam,
-  optionResolution,
   optionScreen,
   optionStorage,
   optionTypeStorage,
@@ -425,20 +425,20 @@ export default function Home({
                 <label className="w-full form-control">
                   <div className="label">
                     <span className="label-text">
-                      Pilih resolusi dari produkmu
+                      Pilih warna dari produkmu
                     </span>
                   </div>
                   <select
-                    value={data ? data.resolution : ""}
+                    value={data ? data.color : ""}
                     onChange={(e) =>
-                      setData({ ...data, resolution: e.target.value })
+                      setData({ ...data, color: e.target.value })
                     }
                     className="bg-transparent select select-bordered"
                   >
                     <option disabled selected>
                       Pilih salah satu ya!
                     </option>
-                    {optionResolution.map((item, index) => (
+                    {optionColor.map((item, index) => (
                       <option key={index} value={item} className="capitalize ">
                         {item}
                       </option>
@@ -512,7 +512,6 @@ export default function Home({
                     </div>
                   ))}
                 {uploadedCount < amount && (
-                  // files.map((item, index) => (
                   <div className="relative">
                     <Image
                       src={URL.createObjectURL(files[uploadedCount - fix])}

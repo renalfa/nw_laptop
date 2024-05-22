@@ -6,6 +6,7 @@ import { FreeMode, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import Link from "next/link";
 
 const Banner = ({ data }: { data: any[] }) => {
   return (
@@ -41,7 +42,7 @@ const Banner = ({ data }: { data: any[] }) => {
       >
         {data.map((item, index) => (
           <SwiperSlide className="flex items-center justify-center" key={index}>
-            <div className="relative">
+            <Link target="_blank" href={item.link} className="relative">
               <Image
                 src={item.url}
                 alt={item.alt}
@@ -50,7 +51,7 @@ const Banner = ({ data }: { data: any[] }) => {
                 className="rounded-lg aspect-[1/1] object-cover object-center w-full h-full"
               />
               <div className="absolute bg-gradient-to-b from-transparent to-black/80 w-full h-[100px] bottom-0 rounded-b-lg"></div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

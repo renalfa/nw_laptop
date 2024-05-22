@@ -11,13 +11,14 @@ export const initialDataProduct = {
   typeStorage: "",
   screen: "",
   OS: "",
-  resolution: "",
+  color: "",
   images: [],
 };
 
 export const initialDataBanner = {
   url: "",
   alt: "",
+  link: ""
 };
 
 export const optionBrand = [
@@ -32,7 +33,16 @@ export const optionBrand = [
   "all",
 ];
 export const optionRam = ["4 GB", "8 GB", "16 GB", "32 GB", "64 GB"];
-export const optionStorage = ["64 GB", "128 GB", "256 GB", "320 GB", "500 GB", "512 GB", "700 GB", "1 TB"];
+export const optionStorage = [
+  "64 GB",
+  "128 GB",
+  "256 GB",
+  "320 GB",
+  "500 GB",
+  "512 GB",
+  "700 GB",
+  "1 TB",
+];
 export const optionTypeStorage = ["SSD", "HDD"];
 export const optionScreen = [
   "10 inch",
@@ -51,4 +61,14 @@ export const optionOS = [
   "Windows 10",
   "Windows 11",
 ];
-export const optionResolution = ["720p", "1080p", "1440p", "2K", "4K", "8K"];
+export const optionColor = [
+  "putih",
+  "hitam",
+  "merah",
+  "biru",
+  "silver",
+  "abu-abu",
+  "bronze",
+  "hijau",
+  "pink",
+];

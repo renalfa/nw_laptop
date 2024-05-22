@@ -51,8 +51,8 @@ export default async function Home({
               {data.screen}
             </p>
             <p className="capitalize ">
-              <span className="font-semibold">resolusi : </span>
-              {data.resolution}
+              <span className="font-semibold">warna : </span>
+              {data.color}
             </p>
             <p className="capitalize ">
               <span className="font-semibold">sistem operasi : </span>

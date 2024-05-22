@@ -5,7 +5,6 @@ import { storage } from "@/services/firebase";
 import { initialDataBanner } from "@/utils/data";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import Image from "next/image";
-import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { GoTrash } from "react-icons/go";
@@ -181,6 +180,18 @@ export default function Home() {
                 * Pastikan ukuran/resolusi gambar 1 : 1
               </span>
             </div>
+          </label>
+          <label className="w-full form-control">
+            <div className="label">
+              <span className="capitalize label-text">link banner</span>
+            </div>
+            <input
+              value={data.link}
+              onChange={(e) => setData({ ...data, link: e.target.value })}
+              type="text"
+              placeholder="Misal: https://linkmu.com"
+              className="w-full bg-transparent input input-bordered"
+            />
           </label>
           <label className="w-full form-control">
             <div className="label">
