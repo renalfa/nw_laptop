@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { SwitchProps } from "./index.type";
 
 const Switch = ({ status, productId, onSwitch }: SwitchProps) => {

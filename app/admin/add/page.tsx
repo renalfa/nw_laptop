@@ -1,7 +1,16 @@
 "use client";
 
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+
+import { GoTrash } from "react-icons/go";
+
 import { storage } from "@/services/firebase";
 import { createProduct } from "@/services/products";
+
 import {
   initialDataProduct,
   optionBrand,
@@ -12,12 +21,6 @@ import {
   optionStorage,
   optionTypeStorage,
 } from "@/utils/data";
-import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
-import { GoTrash } from "react-icons/go";
 
 export default function Home() {
   const router = useRouter();

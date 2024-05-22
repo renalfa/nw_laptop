@@ -1,10 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { Controlled as ControlledZoom } from "react-medium-image-zoom";
+import Image from "next/image";
 
 import "react-medium-image-zoom/dist/styles.css";
-import Image from "next/image";
 
 const ImagePreview = ({ item, index }: { item: string; index: number }) => {
   const [isZoomed, setIsZoomed] = useState(false);

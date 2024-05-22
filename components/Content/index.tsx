@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+
 import Brand from "@/components/Brand";
 import CardProduct from "@/components/CardProduct";
 import Empty from "@/components/Empty";
+
 import { ProductProps } from "../CardProduct/index.type";
 
 const Content = ({ data }: { data: ProductProps[] }) => {

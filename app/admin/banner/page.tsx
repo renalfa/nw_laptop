@@ -1,13 +1,15 @@
 "use client";
 
-import { createBanner, deleteBanner, getAllBanners } from "@/services/banners";
-import { storage } from "@/services/firebase";
-import { initialDataBanner } from "@/utils/data";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { GoTrash } from "react-icons/go";
+
+import { createBanner, deleteBanner, getAllBanners } from "@/services/banners";
+import { storage } from "@/services/firebase";
+
+import { initialDataBanner } from "@/utils/data";
 
 export default function Home() {
   const [data, setData] = useState<any>(initialDataBanner);

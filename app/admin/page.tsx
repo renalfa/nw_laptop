@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
+
 import Modal from "@/components/Modal";
 import Table from "@/components/Table";
+
 import { useProducts } from "@/hook/useProducts";
-import { useState } from "react";
 
 export default function Home() {
   const { data, id, handleDelete, handleSwitch, setId, isError, isSuccess } =

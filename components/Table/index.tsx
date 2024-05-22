@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { GoTrash, GoPencil } from "react-icons/go";
-import { TableProps } from "./index.type";
-import Switch from "@/components/Switch";
 import Link from "next/link";
+
+import Switch from "@/components/Switch";
+
+import { GoTrash, GoPencil } from "react-icons/go";
+
+import { TableProps } from "./index.type";
 
 const Table = ({
   data,

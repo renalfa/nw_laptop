@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 import { ProductProps } from "./index.type";
-import Link from "next/link";
 
 const CardProduct = ({ data }: { data: ProductProps }) => {
   const handleBuyClick = () => {

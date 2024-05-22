@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
+
 import anim from "@/public/json/empty.json";
 
 const Empty = () => {

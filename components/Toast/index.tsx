@@ -1,4 +1,5 @@
 import React from "react";
+
 import { ToastProps } from "./index.type";
 
 const Toast = ({ show, type, msg }: ToastProps) => {

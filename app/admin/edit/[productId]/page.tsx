@@ -1,10 +1,17 @@
 "use client";
 
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+
 import { storage } from "@/services/firebase";
 import {
   editProduct,
   getProductById,
 } from "@/services/products";
+
 import {
   optionBrand,
   optionColor,
@@ -14,11 +21,7 @@ import {
   optionStorage,
   optionTypeStorage,
 } from "@/utils/data";
-import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+
 import { GoTrash } from "react-icons/go";
 
 export default function Home({

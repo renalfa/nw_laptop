@@ -1,9 +1,12 @@
-import Slider from "@/components/Slider";
-import { getProductById } from "@/services/products";
 import Image from "next/image";
 import Link from "next/link";
-import { IoChevronBack } from "react-icons/io5";
+
+import Slider from "@/components/Slider";
 import ButtonBuy from "./_components/ButtonBuy";
+
+import { IoChevronBack } from "react-icons/io5";
+
+import { getProductById } from "@/services/products";
 
 export default async function Home({
   params: { productId },

@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner";
 import Content from "@/components/Content";
-import { getAllBanners } from "@/services/banners";
 
+import { getAllBanners } from "@/services/banners";
 import { getAllProducts } from "@/services/products";
 
 export const revalidate = 0; // revalidate at most every hour
